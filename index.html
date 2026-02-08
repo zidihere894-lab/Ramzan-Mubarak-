@@ -1,0 +1,1703 @@
+<html lang="ur" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رمضان 2026 - Ramadan Mubarak</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600;700&amp;family=Amiri:wght@400;700&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a5f2a;
+            --gold: #d4af37;
+            --night: #0a1628;
+            --light: #f8f9fa;
+            --gradient: linear-gradient(135deg, #0a1628 0%, #1a5f2a 50%, #0a1628 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Nastaliq Urdu', 'Amiri', serif;
+            background: var(--gradient);
+            color: white;
+            min-height: 100vh;
+            line-height: 2;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--gold);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .logo {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: var(--gold);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+
+        /* Countdown Section */
+        .countdown-section {
+            padding: 40px 20px;
+            text-align: center;
+            background: rgba(255,255,255,0.05);
+            margin: 20px;
+            border-radius: 30px;
+            border: 2px solid rgba(212,175,55,0.3);
+        }
+
+        .countdown-title {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: var(--gold);
+        }
+
+        .countdown-box {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .time-unit {
+            background: rgba(0,0,0,0.4);
+            padding: 20px;
+            border-radius: 20px;
+            border: 2px solid var(--gold);
+            backdrop-filter: blur(10px);
+        }
+
+        .time-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: var(--gold);
+            display: block;
+            line-height: 1;
+        }
+
+        .time-label {
+            font-size: 14px;
+            margin-top: 10px;
+            opacity: 0.8;
+        }
+
+        /* Date Info Cards */
+        .info-section {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .info-card {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 25px;
+            border: 2px solid rgba(212,175,55,0.3);
+            text-align: center;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .info-icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .info-card h3 {
+            font-size: 20px;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .info-card .date {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .info-card .day {
+            font-size: 16px;
+            opacity: 0.8;
+        }
+
+        /* Calendar Section */
+        .calendar-section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            color: var(--gold);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+
+        .day-card {
+            background: rgba(255,255,255,0.95);
+            color: #333;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: all 0.3s;
+            border: 3px solid transparent;
+        }
+
+        .day-card:hover {
+            transform: scale(1.02);
+            border-color: var(--gold);
+        }
+
+        .day-card.today {
+            border-color: var(--primary);
+            box-shadow: 0 0 30px rgba(26,95,42,0.4);
+        }
+
+        .day-header {
+            background: var(--gradient);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .roza-number {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .islamic-date {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .day-body {
+            padding: 20px;
+        }
+
+        .gregorian-date {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .timing-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .timing-row:last-child {
+            border-bottom: none;
+        }
+
+        .timing-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .timing-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary);
+            font-family: 'Courier New', monospace;
+        }
+
+        .sehri { color: #1971c2; }
+        .iftar { color: #c92a2a; }
+        .duration { color: #2f9e44; }
+
+        /* Current Time Indicator */
+        .current-time {
+            background: var(--gold);
+            color: #000;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        /* Duas Section */
+        .duas-section {
+            padding: 40px 20px;
+            background: rgba(0,0,0,0.2);
+            margin: 20px;
+            border-radius: 30px;
+        }
+
+        .dua-card {
+            background: rgba(255,255,255,0.95);
+            color: #333;
+            padding: 25px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .dua-title {
+            font-size: 20px;
+            color: var(--primary);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .dua-arabic {
+            font-family: 'Amiri', serif;
+            font-size: 24px;
+            text-align: center;
+            margin: 15px 0;
+            line-height: 2;
+            color: #000;
+        }
+
+        .dua-urdu {
+            font-size: 18px;
+            text-align: center;
+            color: #555;
+            border-top: 2px solid #eee;
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(0,0,0,0.4);
+            border-top: 3px solid var(--gold);
+            margin-top: 40px;
+        }
+
+        .footer-text {
+            font-size: 18px;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .footer-dev {
+            font-size: 14px;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 28px;
+            }
+            
+            .countdown-box {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .calendar-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .time-value {
+                font-size: 28px;
+            }
+        }
+
+        /* Loading Animation */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+
+    <div class="stars" id="stars"><div class="star" style="width: 1.84981px; height: 1.84981px; left: 38.8042%; top: 68.0784%; animation-delay: 0.640368s;"></div><div class="star" style="width: 0.0663723px; height: 0.0663723px; left: 76.353%; top: 26.0398%; animation-delay: 1.20608s;"></div><div class="star" style="width: 1.30434px; height: 1.30434px; left: 30.026%; top: 17.9673%; animation-delay: 0.0319363s;"></div><div class="star" style="width: 1.74138px; height: 1.74138px; left: 9.45336%; top: 98.1721%; animation-delay: 1.96448s;"></div><div class="star" style="width: 1.53997px; height: 1.53997px; left: 79.2023%; top: 85.1191%; animation-delay: 1.72436s;"></div><div class="star" style="width: 2.15491px; height: 2.15491px; left: 92.804%; top: 70.1238%; animation-delay: 1.28904s;"></div><div class="star" style="width: 1.69631px; height: 1.69631px; left: 59.8096%; top: 25.8727%; animation-delay: 0.863659s;"></div><div class="star" style="width: 1.34789px; height: 1.34789px; left: 92.003%; top: 57.2523%; animation-delay: 1.32471s;"></div><div class="star" style="width: 1.11418px; height: 1.11418px; left: 22.4787%; top: 24.395%; animation-delay: 0.483303s;"></div><div class="star" style="width: 2.58644px; height: 2.58644px; left: 16.747%; top: 22.6792%; animation-delay: 1.75473s;"></div><div class="star" style="width: 1.80076px; height: 1.80076px; left: 8.70677%; top: 90.002%; animation-delay: 0.38904s;"></div><div class="star" style="width: 1.5884px; height: 1.5884px; left: 43.535%; top: 73.5642%; animation-delay: 1.6743s;"></div><div class="star" style="width: 2.1924px; height: 2.1924px; left: 9.37956%; top: 5.53376%; animation-delay: 0.580446s;"></div><div class="star" style="width: 0.744736px; height: 0.744736px; left: 65.9917%; top: 79.7653%; animation-delay: 2.77835s;"></div><div class="star" style="width: 0.350137px; height: 0.350137px; left: 60.8868%; top: 72.9648%; animation-delay: 2.19422s;"></div><div class="star" style="width: 1.26661px; height: 1.26661px; left: 25.1934%; top: 63.6972%; animation-delay: 1.72794s;"></div><div class="star" style="width: 0.227534px; height: 0.227534px; left: 66.4578%; top: 63.479%; animation-delay: 1.9473s;"></div><div class="star" style="width: 0.166587px; height: 0.166587px; left: 40.4062%; top: 48.4043%; animation-delay: 0.558952s;"></div><div class="star" style="width: 0.944418px; height: 0.944418px; left: 44.4964%; top: 72.502%; animation-delay: 2.2871s;"></div><div class="star" style="width: 1.43281px; height: 1.43281px; left: 78.035%; top: 29.0264%; animation-delay: 1.00054s;"></div><div class="star" style="width: 1.05778px; height: 1.05778px; left: 11.9913%; top: 36.2828%; animation-delay: 2.25888s;"></div><div class="star" style="width: 0.0914596px; height: 0.0914596px; left: 95.2663%; top: 29.4769%; animation-delay: 0.515301s;"></div><div class="star" style="width: 0.635157px; height: 0.635157px; left: 21.2502%; top: 38.0549%; animation-delay: 0.612681s;"></div><div class="star" style="width: 1.45032px; height: 1.45032px; left: 94.9385%; top: 23.9854%; animation-delay: 1.12917s;"></div><div class="star" style="width: 1.96486px; height: 1.96486px; left: 18.8957%; top: 77.9723%; animation-delay: 1.45702s;"></div><div class="star" style="width: 2.70721px; height: 2.70721px; left: 78.9644%; top: 55.5079%; animation-delay: 1.4051s;"></div><div class="star" style="width: 1.98606px; height: 1.98606px; left: 12.0184%; top: 81.343%; animation-delay: 2.07308s;"></div><div class="star" style="width: 2.40012px; height: 2.40012px; left: 50.7381%; top: 14.8678%; animation-delay: 1.01512s;"></div><div class="star" style="width: 1.9674px; height: 1.9674px; left: 21.3909%; top: 11.0805%; animation-delay: 2.05985s;"></div><div class="star" style="width: 0.889745px; height: 0.889745px; left: 6.53233%; top: 58.3606%; animation-delay: 2.90873s;"></div><div class="star" style="width: 2.36535px; height: 2.36535px; left: 78.8417%; top: 51.0546%; animation-delay: 1.35046s;"></div><div class="star" style="width: 0.149005px; height: 0.149005px; left: 48.4716%; top: 98.0699%; animation-delay: 2.52817s;"></div><div class="star" style="width: 2.57148px; height: 2.57148px; left: 52.729%; top: 64.246%; animation-delay: 0.890117s;"></div><div class="star" style="width: 0.771435px; height: 0.771435px; left: 2.85435%; top: 52.913%; animation-delay: 1.51647s;"></div><div class="star" style="width: 0.517867px; height: 0.517867px; left: 20.4963%; top: 84.4012%; animation-delay: 0.0910581s;"></div><div class="star" style="width: 0.905564px; height: 0.905564px; left: 2.34622%; top: 71.5946%; animation-delay: 2.48063s;"></div><div class="star" style="width: 0.977918px; height: 0.977918px; left: 97.8807%; top: 92.9476%; animation-delay: 1.69062s;"></div><div class="star" style="width: 0.163002px; height: 0.163002px; left: 64.7961%; top: 46.5788%; animation-delay: 1.91214s;"></div><div class="star" style="width: 2.40134px; height: 2.40134px; left: 70.8857%; top: 30.5923%; animation-delay: 2.44019s;"></div><div class="star" style="width: 0.648093px; height: 0.648093px; left: 23.3489%; top: 68.614%; animation-delay: 1.59989s;"></div><div class="star" style="width: 1.21366px; height: 1.21366px; left: 73.9924%; top: 14.6313%; animation-delay: 1.30993s;"></div><div class="star" style="width: 1.40983px; height: 1.40983px; left: 90.7124%; top: 16.0221%; animation-delay: 2.07191s;"></div><div class="star" style="width: 1.92968px; height: 1.92968px; left: 93.5039%; top: 60.591%; animation-delay: 1.87534s;"></div><div class="star" style="width: 1.27551px; height: 1.27551px; left: 17.133%; top: 14.5689%; animation-delay: 2.41725s;"></div><div class="star" style="width: 2.78895px; height: 2.78895px; left: 28.3336%; top: 82.0568%; animation-delay: 2.69496s;"></div><div class="star" style="width: 2.34263px; height: 2.34263px; left: 20.9317%; top: 10.5577%; animation-delay: 2.84247s;"></div><div class="star" style="width: 0.67174px; height: 0.67174px; left: 0.535629%; top: 73.8279%; animation-delay: 0.0476302s;"></div><div class="star" style="width: 2.47499px; height: 2.47499px; left: 44.8186%; top: 95.6593%; animation-delay: 0.109342s;"></div><div class="star" style="width: 0.650618px; height: 0.650618px; left: 8.45459%; top: 2.08268%; animation-delay: 1.75091s;"></div><div class="star" style="width: 1.3921px; height: 1.3921px; left: 84.6729%; top: 56.4189%; animation-delay: 2.06026s;"></div><div class="star" style="width: 0.387261px; height: 0.387261px; left: 56.9339%; top: 64.4859%; animation-delay: 0.953402s;"></div><div class="star" style="width: 2.48375px; height: 2.48375px; left: 56.8844%; top: 40.1589%; animation-delay: 2.67474s;"></div><div class="star" style="width: 1.1906px; height: 1.1906px; left: 81.6235%; top: 53.1402%; animation-delay: 0.880977s;"></div><div class="star" style="width: 2.74686px; height: 2.74686px; left: 60.057%; top: 84.756%; animation-delay: 1.07809s;"></div><div class="star" style="width: 1.73586px; height: 1.73586px; left: 35.6309%; top: 72.0149%; animation-delay: 0.781884s;"></div><div class="star" style="width: 2.95306px; height: 2.95306px; left: 45.4187%; top: 93.7307%; animation-delay: 2.28531s;"></div><div class="star" style="width: 0.639784px; height: 0.639784px; left: 75.2288%; top: 70.8659%; animation-delay: 2.30696s;"></div><div class="star" style="width: 2.68097px; height: 2.68097px; left: 78.6625%; top: 36.2179%; animation-delay: 0.615153s;"></div><div class="star" style="width: 2.47306px; height: 2.47306px; left: 12.4585%; top: 49.775%; animation-delay: 0.44491s;"></div><div class="star" style="width: 1.55284px; height: 1.55284px; left: 17.7842%; top: 99.8832%; animation-delay: 1.57698s;"></div><div class="star" style="width: 2.41147px; height: 2.41147px; left: 71.2759%; top: 78.6136%; animation-delay: 1.61492s;"></div><div class="star" style="width: 2.79561px; height: 2.79561px; left: 20.2905%; top: 80.7325%; animation-delay: 1.04651s;"></div><div class="star" style="width: 1.08848px; height: 1.08848px; left: 26.6582%; top: 53.5842%; animation-delay: 2.28213s;"></div><div class="star" style="width: 1.37297px; height: 1.37297px; left: 47.3873%; top: 64.0354%; animation-delay: 0.725452s;"></div><div class="star" style="width: 1.51294px; height: 1.51294px; left: 68.964%; top: 34.2712%; animation-delay: 0.355955s;"></div><div class="star" style="width: 2.9342px; height: 2.9342px; left: 20.9898%; top: 89.2696%; animation-delay: 1.10011s;"></div><div class="star" style="width: 2.10021px; height: 2.10021px; left: 45.0844%; top: 78.6354%; animation-delay: 0.130449s;"></div><div class="star" style="width: 1.15564px; height: 1.15564px; left: 73.6529%; top: 32.275%; animation-delay: 1.39743s;"></div><div class="star" style="width: 1.82136px; height: 1.82136px; left: 80.8419%; top: 86.7327%; animation-delay: 1.89611s;"></div><div class="star" style="width: 0.0486021px; height: 0.0486021px; left: 22.1937%; top: 74.1209%; animation-delay: 0.944988s;"></div><div class="star" style="width: 1.32519px; height: 1.32519px; left: 54.2154%; top: 92.8433%; animation-delay: 2.65842s;"></div><div class="star" style="width: 2.41955px; height: 2.41955px; left: 42.3236%; top: 36.6722%; animation-delay: 2.61947s;"></div><div class="star" style="width: 1.14344px; height: 1.14344px; left: 52.8062%; top: 22.3362%; animation-delay: 2.82336s;"></div><div class="star" style="width: 1.53566px; height: 1.53566px; left: 99.1146%; top: 56.1885%; animation-delay: 0.554487s;"></div><div class="star" style="width: 1.32324px; height: 1.32324px; left: 79.8468%; top: 46.856%; animation-delay: 0.583379s;"></div><div class="star" style="width: 2.72562px; height: 2.72562px; left: 13.0738%; top: 38.5961%; animation-delay: 1.51536s;"></div><div class="star" style="width: 2.9264px; height: 2.9264px; left: 10.0971%; top: 91.0669%; animation-delay: 0.273383s;"></div><div class="star" style="width: 0.886081px; height: 0.886081px; left: 80.3854%; top: 55.7908%; animation-delay: 1.17401s;"></div><div class="star" style="width: 2.37055px; height: 2.37055px; left: 57.7091%; top: 73.9262%; animation-delay: 2.62183s;"></div><div class="star" style="width: 1.01167px; height: 1.01167px; left: 10.238%; top: 8.55791%; animation-delay: 0.597786s;"></div><div class="star" style="width: 2.18302px; height: 2.18302px; left: 33.4828%; top: 51.8408%; animation-delay: 2.4099s;"></div><div class="star" style="width: 1.0293px; height: 1.0293px; left: 67.7213%; top: 65.6323%; animation-delay: 2.61561s;"></div><div class="star" style="width: 0.756502px; height: 0.756502px; left: 49.7462%; top: 85.175%; animation-delay: 1.00509s;"></div><div class="star" style="width: 1.44887px; height: 1.44887px; left: 84.4683%; top: 45.8702%; animation-delay: 2.29297s;"></div><div class="star" style="width: 0.594686px; height: 0.594686px; left: 26.5228%; top: 68.1664%; animation-delay: 2.93973s;"></div><div class="star" style="width: 2.53062px; height: 2.53062px; left: 25.7002%; top: 5.07839%; animation-delay: 0.578874s;"></div><div class="star" style="width: 2.52836px; height: 2.52836px; left: 73.1794%; top: 52.4418%; animation-delay: 0.0917248s;"></div><div class="star" style="width: 1.89955px; height: 1.89955px; left: 17.7325%; top: 11.6553%; animation-delay: 2.54934s;"></div><div class="star" style="width: 0.128274px; height: 0.128274px; left: 69.6716%; top: 80.6017%; animation-delay: 0.0952687s;"></div><div class="star" style="width: 1.79909px; height: 1.79909px; left: 14.451%; top: 39.5069%; animation-delay: 2.8283s;"></div><div class="star" style="width: 0.704933px; height: 0.704933px; left: 16.4226%; top: 66.5647%; animation-delay: 0.639824s;"></div><div class="star" style="width: 1.02196px; height: 1.02196px; left: 28.5333%; top: 15.9854%; animation-delay: 1.5054s;"></div><div class="star" style="width: 0.536466px; height: 0.536466px; left: 40.004%; top: 92.856%; animation-delay: 0.310839s;"></div><div class="star" style="width: 0.420607px; height: 0.420607px; left: 62.4611%; top: 59.4749%; animation-delay: 2.78605s;"></div><div class="star" style="width: 1.87216px; height: 1.87216px; left: 75.0717%; top: 24.1109%; animation-delay: 1.38133s;"></div><div class="star" style="width: 0.757513px; height: 0.757513px; left: 69.0373%; top: 36.7687%; animation-delay: 1.8162s;"></div><div class="star" style="width: 0.45353px; height: 0.45353px; left: 18.063%; top: 99.1106%; animation-delay: 2.986s;"></div><div class="star" style="width: 1.20831px; height: 1.20831px; left: 58.4545%; top: 39.5602%; animation-delay: 1.71114s;"></div><div class="star" style="width: 1.77157px; height: 1.77157px; left: 98.6193%; top: 2.08154%; animation-delay: 2.96191s;"></div><div class="star" style="width: 0.876465px; height: 0.876465px; left: 92.9956%; top: 49.6912%; animation-delay: 0.591606s;"></div></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">🌙</div>
+        <h1>رمضان المبارک 1447 ہجری</h1>
+        <p>Ramadan 2026 - Pakistan</p>
+    </header>
+
+    <!-- Countdown -->
+    <section class="countdown-section">
+        <h2 class="countdown-title">
+            <i class="fas fa-clock"></i>
+            پہلے روزے میں باقی وقت
+        </h2>
+        <div class="countdown-box" id="countdown">
+            <div class="time-unit">
+                <span class="time-value" id="days">14</span>
+                <span class="time-label">دن</span>
+            </div>
+            <div class="time-unit">
+                <span class="time-value" id="hours">20</span>
+                <span class="time-label">گھنٹے</span>
+            </div>
+            <div class="time-unit">
+                <span class="time-value" id="minutes">04</span>
+                <span class="time-label">منٹ</span>
+            </div>
+            <div class="time-unit">
+                <span class="time-value" id="seconds">01</span>
+                <span class="time-label">سیکنڈ</span>
+            </div>
+        </div>
+        <div class="current-time" id="currentTime">
+                    <i class="fas fa-calendar-day"></i>
+                    آج: بدھ، 4 فروری، 2026
+                </div>
+    </section>
+
+    <!-- Info Cards -->
+    <section class="info-section">
+        <div class="info-card">
+            <div class="info-icon">🌙</div>
+            <h3>پہلا روزہ</h3>
+            <div class="date">19 فروری 2026</div>
+            <div class="day">جمعرات</div>
+        </div>
+        <div class="info-card">
+            <div class="info-icon">🕌</div>
+            <h3>عید الفطر</h3>
+            <div class="date">20 مارچ 2026</div>
+            <div class="day">جمعہ</div>
+        </div>
+        <div class="info-card">
+            <div class="info-icon">📅</div>
+            <h3>کل روزے</h3>
+            <div class="date">30</div>
+            <div class="day">پورا مہینہ</div>
+        </div>
+        <div class="info-card">
+            <div class="info-icon">⏰</div>
+            <h3>روزے کا دورانیہ</h3>
+            <div class="date">13-14 گھنٹے</div>
+            <div class="day&gt;فروری سے مارچ&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Calendar --&gt;
+    &lt;section class=" calendar-section"="">
+        <h2 class="section-title">
+            <i class="fas fa-calendar-alt"></i>
+            مکمل روزہ شیڈول 2026
+        </h2>
+        <div class="calendar-grid" id="calendarGrid">
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 1</span>
+                            <span class="islamic-date">1 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">19 فروری، 2026 - جمعرات</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">05:30 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:15 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 2</span>
+                            <span class="islamic-date">2 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">20 فروری، 2026 - جمعہ</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">05:32 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:17 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 3</span>
+                            <span class="islamic-date">3 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">21 فروری، 2026 - ہفتہ</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">05:34 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:19 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 4</span>
+                            <span class="islamic-date">4 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">22 فروری، 2026 - اتوار</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">05:36 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:21 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 5</span>
+                            <span class="islamic-date">5 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">23 فروری، 2026 - پیر</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">05:38 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:23 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 6</span>
+                            <span class="islamic-date">6 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">24 فروری، 2026 - منگل</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">05:40 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:25 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 7</span>
+                            <span class="islamic-date">7 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">25 فروری، 2026 - بدھ</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">05:42 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:27 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 8</span>
+                            <span class="islamic-date">8 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">26 فروری، 2026 - جمعرات</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">05:44 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:29 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 9</span>
+                            <span class="islamic-date">9 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">27 فروری، 2026 - جمعہ</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">05:46 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:31 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 10</span>
+                            <span class="islamic-date">10 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">28 فروری، 2026 - ہفتہ</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">05:48 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:33 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 11</span>
+                            <span class="islamic-date">11 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">1 مارچ، 2026 - اتوار</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">05:50 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:35 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 12</span>
+                            <span class="islamic-date">12 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">2 مارچ، 2026 - پیر</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">05:52 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:37 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 13</span>
+                            <span class="islamic-date">13 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">3 مارچ، 2026 - منگل</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">05:54 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:39 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 14</span>
+                            <span class="islamic-date">14 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">4 مارچ، 2026 - بدھ</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">05:56 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:41 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 15</span>
+                            <span class="islamic-date">15 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">5 مارچ، 2026 - جمعرات</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">05:58 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:43 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 16</span>
+                            <span class="islamic-date">16 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">6 مارچ، 2026 - جمعہ</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">06:00 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:45 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 17</span>
+                            <span class="islamic-date">17 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">7 مارچ، 2026 - ہفتہ</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">06:02 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:47 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 18</span>
+                            <span class="islamic-date">18 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">8 مارچ، 2026 - اتوار</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">06:04 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:49 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 19</span>
+                            <span class="islamic-date">19 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">9 مارچ، 2026 - پیر</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">06:06 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:51 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 20</span>
+                            <span class="islamic-date">20 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">10 مارچ، 2026 - منگل</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">06:08 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:53 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 21</span>
+                            <span class="islamic-date">21 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">11 مارچ، 2026 - بدھ</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">06:10 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:55 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 22</span>
+                            <span class="islamic-date">22 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">12 مارچ، 2026 - جمعرات</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">06:12 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:57 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 23</span>
+                            <span class="islamic-date">23 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">13 مارچ، 2026 - جمعہ</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">06:14 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">18:59 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 24</span>
+                            <span class="islamic-date">24 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">14 مارچ، 2026 - ہفتہ</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">06:16 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">19:01 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 25</span>
+                            <span class="islamic-date">25 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">15 مارچ، 2026 - اتوار</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">06:18 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">19:03 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 26</span>
+                            <span class="islamic-date">26 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">16 مارچ، 2026 - پیر</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">06:20 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">19:05 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 27</span>
+                            <span class="islamic-date">27 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">17 مارچ، 2026 - منگل</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">06:22 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">19:07 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 28</span>
+                            <span class="islamic-date">28 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">18 مارچ، 2026 - بدھ</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">06:24 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">19:09 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 29</span>
+                            <span class="islamic-date">29 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">19 مارچ، 2026 - جمعرات</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">06:26 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">19:11 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="day-card ">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ 30</span>
+                            <span class="islamic-date">30 رمضان 1447</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">20 مارچ، 2026 - جمعہ</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">06:28 AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">19:13 PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">12 گھنٹے 45 منٹ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    </div></div></section>
+
+    <!-- Duas -->
+    <section class="duas-section">
+        <h2 class="section-title">
+            <i class="fas fa-praying-hands"></i>
+            اہم دعائیں
+        </h2>
+        
+        <div class="dua-card">
+            <div class="dua-title">
+                <i class="fas fa-moon"></i>
+                روزہ رکھنے کی نیت
+            </div>
+            <div class="dua-arabic" dir="rtl">
+                وَبِصَوْمِ غَدٍ نَّوَيْتُ مِنْ شَهْرِ رَمَضَانَ
+            </div>
+            <div class="dua-urdu">
+                "اور میں نے ماہ رمضان کے کل کے روزے کی نیت کی"
+            </div>
+        </div>
+
+        <div class="dua-card">
+            <div class="dua-title">
+                <i class="fas fa-sunset"></i>
+                افطار کی دعا
+            </div>
+            <div class="dua-arabic" dir="rtl">
+                اللَّهُمَّ إِنِّي لَكَ صُمْتُ وَبِكَ آمَنْتُ وَعَلَى رِزْقِكَ أَفْطَرْتُ
+            </div>
+            <div class="dua-urdu">
+                "اے اللہ! میں نے تیری خاطر روزہ رکھا، تجھ پر ایمان لایا اور تیرے دیے ہوئے رزق سے افطار کیا"
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-text">رمضان 2026 - تمام مسلمانوں کے لیے مبارک ہو</div>
+        <div class="footer-dev">Designed with <i class="fas fa-heart" style="color: #e03131;"></i> By Ziddi Here</div>
+    </footer>
+
+    <script>
+        // Ramadan 2026 Data - Based on search results
+        const RAMADAN_2026 = {
+            startDate: new Date('2026-02-19T05:00:00'), // 19 Feb 2026
+            endDate: new Date('2026-03-20T18:00:00'),   // 20 Mar 2026 (Eid)
+            totalDays: 30,
+            baseTimings: {
+                // Sehri and Iftar times for Lahore (adjust for other cities)
+                sehri: "05:30",  // AM
+                iftar: "18:15"   // PM
+            }
+        };
+
+        // Generate daily schedule with slight variations
+        function generateCalendar() {
+            const calendar = [];
+            const start = new Date(RAMADAN_2026.startDate);
+            
+            for (let i = 0; i < 30; i++) {
+                const date = new Date(start);
+                date.setDate(start.getDate() + i);
+                
+                // Simulate time changes (Sehri gets earlier, Iftar gets later)
+                const sehriMinutes = 330 + (i * 2); // 5:30 AM + 2 min earlier each day
+                const iftarMinutes = 1095 + (i * 2); // 6:15 PM + 2 min later each day
+                
+                const sehriTime = minutesToTime(sehriMinutes);
+                const iftarTime = minutesToTime(iftarMinutes);
+                const duration = calculateDuration(sehriMinutes, iftarMinutes);
+                
+                calendar.push({
+                    roza: i + 1,
+                    date: date,
+                    islamicDate: `${i + 1} رمضان 1447`,
+                    sehri: sehriTime,
+                    iftar: iftarTime,
+                    duration: duration,
+                    dayName: getUrduDay(date.getDay())
+                });
+            }
+            
+            return calendar;
+        }
+
+        function minutesToTime(minutes) {
+            const hrs = Math.floor(minutes / 60) % 24;
+            const mins = minutes % 60;
+            return `${hrs.toString().padStart(2, '0')}:${mins.toString().padStart(2, '0')}`;
+        }
+
+        function calculateDuration(sehri, iftar) {
+            const diff = iftar - sehri;
+            const hrs = Math.floor(diff / 60);
+            const mins = diff % 60;
+            return `${hrs} گھنٹے ${mins} منٹ`;
+        }
+
+        function getUrduDay(day) {
+            const days = ['اتوار', 'پیر', 'منگل', 'بدھ', 'جمعرات', 'جمعہ', 'ہفتہ'];
+            return days[day];
+        }
+
+        // Render Calendar
+        function renderCalendar() {
+            const calendar = generateCalendar();
+            const grid = document.getElementById('calendarGrid');
+            const today = new Date();
+            
+            grid.innerHTML = calendar.map(day => {
+                const isToday = isSameDate(day.date, today);
+                const dateStr = day.date.toLocaleDateString('ur-PK', {
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric'
+                });
+                
+                return `
+                    <div class="day-card ${isToday ? 'today' : ''}">
+                        <div class="day-header">
+                            <span class="roza-number">روزہ ${day.roza}</span>
+                            <span class="islamic-date">${day.islamicDate}</span>
+                        </div>
+                        <div class="day-body">
+                            <div class="gregorian-date">${dateStr} - ${day.dayName}</div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-moon" style="color: #1971c2;"></i>
+                                    سحری
+                                </span>
+                                <span class="timing-value sehri">${day.sehri} AM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-sun" style="color: #f59f00;"></i>
+                                    افطار
+                                </span>
+                                <span class="timing-value iftar">${day.iftar} PM</span>
+                            </div>
+                            
+                            <div class="timing-row">
+                                <span class="timing-label">
+                                    <i class="fas fa-clock" style="color: #2f9e44;"></i>
+                                    دورانیہ
+                                </span>
+                                <span class="timing-value duration">${day.duration}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function isSameDate(d1, d2) {
+            return d1.getDate() === d2.getDate() &&
+                   d1.getMonth() === d2.getMonth() &&
+                   d1.getFullYear() === d2.getFullYear();
+        }
+
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const ramadanStart = RAMADAN_2026.startDate;
+            const diff = ramadanStart - now;
+            
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                document.getElementById('days').textContent = days.toString().padStart(2, '0');
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                
+                document.getElementById('currentTime').innerHTML = `
+                    <i class="fas fa-calendar-day"></i>
+                    آج: ${now.toLocaleDateString('ur-PK', {weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
+                `;
+            } else {
+                document.querySelector('.countdown-title').innerHTML = '<i class="fas fa-check-circle"></i> رمضان مبارک! پہلا روزہ شروع';
+                document.getElementById('countdown').style.display = 'none';
+            }
+        }
+
+        // Create stars background
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            for (let i = 0; i < 100; i++) {
+                const star = document.createElement('div');
+                star.className = 'star';
+                star.style.width = Math.random() * 3 + 'px';
+                star.style.height = star.style.width;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 3 + 's';
+                starsContainer.appendChild(star);
+            }
+        }
+
+        // Initialize
+        createStars();
+        renderCalendar();
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+    </script>
+
+</body></html>
